@@ -1,8 +1,9 @@
-streamlit
-pandas
-numpy
-rdkit
-mordred
+streamlit==1.50.0
+pandas==2.2.3
+numpy==1.26.4
+rdkit-pypi==2022.9.5
+mordredcommunity
 scikit-learn==1.4.2
 joblib
 graphviz
+matplotlib==3.8.4
