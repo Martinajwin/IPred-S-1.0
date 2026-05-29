@@ -79,7 +79,7 @@ def get_consensus_class(rf_p, svm_p, rf_ad, svm_ad):
             return f"{ens_pred} (outside AD)"# -----------------------------
 # ⚗️ Streamlit UI
 # -----------------------------
-st.set_page_config(page_title="Consensus Screening Pipeline", layout="wide")
+st.set_page_config(page_title="AIP-S 1.0", layout="wide")
 st.title("Alzheimer’s disease, Inhibitor Predictor for sEH (1.0)")  
 st.markdown("### (AIP-S 1.0)")
 
