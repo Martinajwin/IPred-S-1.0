@@ -430,7 +430,7 @@ with tab4:
     st.markdown("If you use the AIP-S 1.0 webtool in research or publications, please cite:")
     
     # Using st.info creates a bright, highlighted box instead of dimmed text
-    st.info("**AIP-S 1.0 Webtool** | Ajwin Joseph Martin, Dr. Dileep Kumar | Version 1.0 (2026).  \n**Webtool URL:** *(Insert your deployed Streamlit URL here)*")
+    st.info("**AIP-S 1.0 Webtool** | Dileep Kumar et al. | Version 1.0 (2026).  \n**Webtool URL:** *https://aip-s-1-single-stage-screening.streamlit.app/*")
 
     st.markdown("### How to Cite the Associated Research Article (Pre-publication)")
     st.markdown("This tool accompanies an unpublished research manuscript. Until acceptance, please cite the webtool as follows:")
