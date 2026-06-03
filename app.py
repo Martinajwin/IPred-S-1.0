@@ -1,5 +1,5 @@
 # ==========================================================
-# 🏷️ AIP-S 1.0 (Production Pipeline)
+# 🏷️ IPred-S 1.0 (Production Pipeline)
 # ==========================================================
 
 import streamlit as st
@@ -79,9 +79,9 @@ def get_consensus_class(rf_p, svm_p, rf_ad, svm_ad):
             return f"{ens_pred} (outside AD)"# -----------------------------
 # ⚗️ Streamlit UI
 # -----------------------------
-st.set_page_config(page_title="AIP-S 1.0", layout="wide")
-st.title("Alzheimer’s disease, Inhibitor Predictor for sEH (1.0)")  
-st.markdown("### (AIP-S 1.0)")
+st.set_page_config(page_title="IPred-S 1.0", layout="wide")
+st.title("Inhibitor Predictor for sEH (1.0)")  
+st.markdown("### (IPred-S 1.0)")
 
 tabs = st.tabs(["1️⃣ Molecule Screening", "2️⃣ Methodology", "3️⃣ Model Performance", "4️⃣ References and Citation"])
 tab1, tab2, tab3, tab4 = tabs
@@ -90,7 +90,7 @@ tab1, tab2, tab3, tab4 = tabs
 # 1️⃣ SCREENING TAB
 # ==========================================================
 with tab1:
-    st.header("Predict sEH inhibitors for Alzheimer’s Disease")
+    st.header("Predict sEH inhibitors")
 
     rf_model, svm_model, scaler_loaded, rf_ad_threshold, svm_ad_threshold = load_pipeline_assets()
 
@@ -245,7 +245,7 @@ with tab2:
         """
 **Consensus ML Workflow for Compound Activity Prediction**
 
-The AIP-S 1.0 pipeline implements a highly stringent, consensus-based machine learning framework for predicting soluble epoxide hydrolase (sEH) inhibitors. SMILES input via manual entry or CSV is first validated and canonicalized. To accurately capture 3D volumetric properties without corrupting 2D graph features, molecules undergo a rapid heavy-atom 3D coordinate embedding. The pipeline then computes 23 highly stable topological descriptors (1D, 2D, and 3D) using Mordred. While early iterations of this framework incorporated Quantum Mechanical (QM) descriptors to capture deeper electronic properties, they were excluded from the final deployment. The prohibitive computational cost of executing real-time quantum calculations creates a massive bottleneck for web-based screening. By isolating the 23 most predictive topological features, the tool ensures rapid, high-throughput performance without sacrificing the strict accuracy of the models. These raw features are then strictly normalized using a pre-fitted True Standard Scaler extracted from the original training dataset.
+The IPred-S 1.0 pipeline implements a highly stringent, consensus-based machine learning framework for predicting soluble epoxide hydrolase (sEH) inhibitors. SMILES input via manual entry or CSV is first validated and canonicalized. To accurately capture 3D volumetric properties without corrupting 2D graph features, molecules undergo a rapid heavy-atom 3D coordinate embedding. The pipeline then computes 23 highly stable topological descriptors (1D, 2D, and 3D) using Mordred. While early iterations of this framework incorporated Quantum Mechanical (QM) descriptors to capture deeper electronic properties, they were excluded from the final deployment. The prohibitive computational cost of executing real-time quantum calculations creates a massive bottleneck for web-based screening. By isolating the 23 most predictive topological features, the tool ensures rapid, high-throughput performance without sacrificing the strict accuracy of the models. These raw features are then strictly normalized using a pre-fitted True Standard Scaler extracted from the original training dataset.
 
 Classification is performed simultaneously by a Random Forest (RF) and a Support Vector Machine (SVM). Each model establishes an independent Applicability Domain (AD) threshold based on the training set's confidence distribution. The final prediction is governed by a strict 5-rule hierarchical consensus logic that evaluates model agreement, independent confidence margins, and AD constraints to actively minimize false positives. Finally, the merged predictions, probabilities, and detailed data with descriptors are displayed and available for export.
 """
@@ -328,7 +328,7 @@ Classification is performed simultaneously by a Random Forest (RF) and a Support
 # 3️⃣ MODEL PERFORMANCE TAB
 # ==========================================================
 with tab3:
-    st.header("AIP-S 1.0 Evaluation Results")
+    st.header("IPred-S 1.0 Evaluation Results")
 
     st.info("Detailed cross-validation metrics, full external test set validation, and comparative benchmarking data for the Random Forest and SVM models will be fully updated upon the publication of the associated research article.")
 
@@ -426,16 +426,16 @@ with tab3:
 with tab4:
     st.header("References and Citation")
     
-    st.markdown("### How to Cite AIP-S 1.0 (Webtool Citation)")
-    st.markdown("If you use the AIP-S 1.0 webtool in research or publications, please cite:")
+    st.markdown("### How to Cite IPred-S 1.0 (Webtool Citation)")
+    st.markdown("If you use the IPred-S 1.0 webtool in research or publications, please cite:")
     
     # Using st.info creates a bright, highlighted box instead of dimmed text
-    st.info("**AIP-S 1.0 Webtool** | Dileep Kumar et al. | Version 1.0 (2026).  \n**Webtool URL:** *https://aip-s-1-single-stage-screening.streamlit.app/*")
+    st.info("**IPred-S 1.0 Webtool** | Dileep Kumar et al. | Version 1.0 (2026).  \n**Webtool URL:** *https://aip-s-1-single-stage-screening.streamlit.app/*")
 
     st.markdown("### How to Cite the Associated Research Article (Pre-publication)")
     st.markdown("This tool accompanies an unpublished research manuscript. Until acceptance, please cite the webtool as follows:")
     
-    st.info("**AIP-S 1.0: Consensus Machine Learning Framework for Predicting Soluble Epoxide Hydrolase (sEH) Inhibitors** | Ajwin Joseph Martin, Dileep Kumar. | *Manuscript in preparation* (2026).")
+    st.info("**IPred-S 1.0: Consensus Machine Learning Framework for Predicting Soluble Epoxide Hydrolase (sEH) Inhibitors** | Ajwin Joseph Martin, Dileep Kumar. | *Manuscript in preparation* (2026).")
 
     st.markdown("*(Final journal citation and DOI will be updated here once published and archived.)*")
 
@@ -443,7 +443,7 @@ with tab4:
 
     st.markdown("""
 ### Scientific Literature & Computational Packages
-Below is the complete list of scientific literature, software tools, and computational packages used in the development, validation, and deployment of AIP-S 1.0.
+Below is the complete list of scientific literature, software tools, and computational packages used in the development, validation, and deployment of IPred-S 1.0.
 
 #### 1. Machine Learning & Data Processing
 * **Breiman, L.** Random Forests. *Machine Learning*, 45, 5–32 (2001).
