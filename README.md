@@ -15,7 +15,7 @@ IPred-S 1.0 is a Streamlit web application implementing a highly stringent, cons
 ### Access the Web Tool
 You can access and use the IPred-S 1.0 virtual screening pipeline directly through your web browser without any installation required:
 
-🔗 **[Launch IPred-S 1.0 Web Tool Here](https://aip-s-1-single-stage-screening.streamlit.app/)**
+🔗 **[Launch IPred-S 1.0 Web Tool Here](https://ipred-s-1-single-stage-screening.streamlit.app/)**
 
 ---
 
@@ -23,7 +23,7 @@ You can access and use the IPred-S 1.0 virtual screening pipeline directly throu
 If you utilize the IPred-S 1.0 webtool or concepts in your research, please cite:
 
 > **IPred-S 1.0 Webtool** | Dileep Kumar et al. | Version 1.0 (2026).  
-> **Webtool URL:** *(https://aip-s-1-single-stage-screening.streamlit.app/)*
+> **Webtool URL:** *(https://ipred-s-1-single-stage-screening.streamlit.app/)*
 
 > **IPred-S 1.0: Consensus Machine Learning Framework for Predicting Soluble Epoxide Hydrolase (sEH) Inhibitors** | A. J. Martin, D. Kumar. | *Manuscript in preparation* (2026).
 
