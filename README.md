@@ -1,7 +1,7 @@
-# Alzheimer’s Disease Inhibitor Predictor for sEH (AIP-S 1.0)
+# Inhibitor Predictor for sEH (IPred-S 1.0)
 
 ### Overview
-AIP-S 1.0 is a Streamlit web application implementing a highly stringent, consensus-based machine learning pipeline to predict soluble epoxide hydrolase (sEH) inhibitors for Alzheimer’s disease. It employs 23 elite topological Mordred molecular descriptors alongside Random Forest (RF) and Support Vector Machine (SVM) models. The pipeline is rigorously validated on external test sets, decoy datasets, and PAINS datasets to enforce ultra-high precision and minimize false positives during virtual screening.
+IPred-S 1.0 is a Streamlit web application implementing a highly stringent, consensus-based machine learning pipeline to predict soluble epoxide hydrolase (sEH) inhibitors. It employs 23 elite topological Mordred molecular descriptors alongside Random Forest (RF) and Support Vector Machine (SVM) models. The pipeline is rigorously validated on external test sets, decoy datasets, and PAINS datasets to enforce ultra-high precision and minimize false positives during virtual screening.
 
 ### Features
 * **Flexible Input:** Input SMILES strings manually or via CSV upload.
@@ -13,19 +13,19 @@ AIP-S 1.0 is a Streamlit web application implementing a highly stringent, consen
 ---
 
 ### Access the Web Tool
-You can access and use the AIP-S 1.0 virtual screening pipeline directly through your web browser without any installation required:
+You can access and use the IPred-S 1.0 virtual screening pipeline directly through your web browser without any installation required:
 
-🔗 **[Launch AIP-S 1.0 Web Tool Here](https://aip-s-1-single-stage-screening.streamlit.app/)**
+🔗 **[Launch IPred-S 1.0 Web Tool Here](https://aip-s-1-single-stage-screening.streamlit.app/)**
 
 ---
 
 ### Citation
-If you utilize the AIP-S 1.0 webtool or concepts in your research, please cite:
+If you utilize the IPred-S 1.0 webtool or concepts in your research, please cite:
 
-> **AIP-S 1.0 Webtool** | Dileep Kumar et al. | Version 1.0 (2026).  
+> **IPred-S 1.0 Webtool** | Dileep Kumar et al. | Version 1.0 (2026).  
 > **Webtool URL:** *(https://aip-s-1-single-stage-screening.streamlit.app/)*
 
-> **AIP-S 1.0: Consensus Machine Learning Framework for Predicting Soluble Epoxide Hydrolase (sEH) Inhibitors** | A. J. Martin, D. Kumar. | *Manuscript in preparation* (2026).
+> **IPred-S 1.0: Consensus Machine Learning Framework for Predicting Soluble Epoxide Hydrolase (sEH) Inhibitors** | A. J. Martin, D. Kumar. | *Manuscript in preparation* (2026).
 
 *(Final journal citation and DOI will be updated here once published and archived.)*
 
@@ -35,7 +35,7 @@ If you utilize the AIP-S 1.0 webtool or concepts in your research, please cite:
 
 **© 2026 Ajwin Joseph Martin and Dr. Dileep Kumar. All rights reserved.**
 
-The source code, algorithms, consensus logic, and trained models associated with AIP-S 1.0 are the exclusive intellectual property of the authors. This repository is made public for the sole purpose of deploying the Streamlit web application and facilitating transparency for academic peer review.
+The source code, algorithms, consensus logic, and trained models associated with IPred-S 1.0 are the exclusive intellectual property of the authors. This repository is made public for the sole purpose of deploying the Streamlit web application and facilitating transparency for academic peer review.
 
 **Permissions:**
 * You are permitted to view the source code for educational and peer-review purposes.
