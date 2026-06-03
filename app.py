@@ -239,7 +239,7 @@ with tab1:
 # 2️⃣ METHODOLOGY TAB (PROCEDURE & FLOWCHART)
 # ==========================================================
 with tab2:
-    st.header("Methodology and Working of AIP-S 1.0")
+    st.header("Methodology and Working of IPred-S 1.0")
 
     st.markdown(
         """
@@ -251,7 +251,7 @@ Classification is performed simultaneously by a Random Forest (RF) and a Support
 """
     )
 
-    st.subheader("AIP-S 1.0 Flowchart Overview")
+    st.subheader("IPred-S 1.0 Flowchart Overview")
     st.markdown("<br>", unsafe_allow_html=True)
 
     # 🛑 SIZING FIX: We wrap the chart in columns to prevent it from stretching across the entire wide screen.
@@ -415,7 +415,7 @@ with tab3:
     st.table(pd.DataFrame(pains_data))
 
     st.success("""
-    **🛡️ Note on Screening Performance (PAINS & False Positives):** Pan Assay Interference Compounds (PAINS) are notorious for generating false-positive signals in computational screening. The strict consensus logic implemented in AIP-S 1.0 successfully identifies and rejects **98.44%** of these deceptive compounds, leaving a negligible false-positive rate of only 1.56%. 
+    **🛡️ Note on Screening Performance (PAINS & False Positives):** Pan Assay Interference Compounds (PAINS) are notorious for generating false-positive signals in computational screening. The strict consensus logic implemented in IPred-S 1.0 successfully identifies and rejects **98.44%** of these deceptive compounds, leaving a negligible false-positive rate of only 1.56%. 
     
     This explicitly justifies the highly punitive nature of the deployed pipeline: if the web tool's threshold were relaxed to `0.40` to catch more true actives, PAINS false-positives would surge to over 14%. The strict consensus rules actively sacrifice baseline recall to ensure that any predicted "Active" is completely insulated from chemical noise.
     """)
@@ -470,7 +470,7 @@ Below is the complete list of scientific literature, software tools, and computa
 * **Mysinger et al.** Directory of Useful Decoys, Enhanced (DUD-E). *J. Med. Chem.* 55, 14 (2012).
 * **sEH Bioassay Data:** Retrieved from peer-reviewed literature *(details in Supplementary Material of the upcoming manuscript)*.
 
-#### 6. Software, Platforms & Versions (Used in AIP-S 1.0)
+#### 6. Software, Platforms & Versions (Used in IPred-S 1.0)
 | Software / Package | Version | Purpose |
 | :--- | :--- | :--- |
 | **Python** | 3.10 | Core Development |
