@@ -27,7 +27,7 @@ jobs:
               browser = p.chromium.launch()
               page = browser.new_page()
               print('Opening Streamlit app...')
-              page.goto('https://aip-s-1-single-stage-screening.streamlit.app/')
+              page.goto('https://ipred-s-1-single-stage-screening.streamlit.app/')
               page.wait_for_timeout(10000) # Wait 10 seconds for WebSocket to connect
               print('Ping successful. Closing browser.')
               browser.close()
