@@ -35,7 +35,7 @@ If you utilize the IPred-S 1.0 webtool or concepts in your research, please cite
 
 **© 2026 Manipal Academy of Higher Education (MAHE). All rights reserved.**
 
-**Authors/Creators:** Ajwin Joseph Martin and Dr. Dileep Kumar
+**Authors/Creators:** Dileep Kumar and Ajwin Joseph Martin
 
 The source code, algorithms, consensus logic, and trained models associated with IPred-S 1.0 are the exclusive intellectual property of Manipal Academy of Higher Education (MAHE). This repository is hosted on the creators' personal account and made public for the sole purpose of deploying the Streamlit web application and facilitating transparency for academic peer review.
 
