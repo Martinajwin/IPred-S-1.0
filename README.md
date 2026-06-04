@@ -33,9 +33,11 @@ If you utilize the IPred-S 1.0 webtool or concepts in your research, please cite
 
 ### Copyright & Intellectual Property
 
-**© 2026 Ajwin Joseph Martin and Dr. Dileep Kumar. All rights reserved.**
+**© 2026 Manipal Academy of Higher Education (MAHE). All rights reserved.**
 
-The source code, algorithms, consensus logic, and trained models associated with IPred-S 1.0 are the exclusive intellectual property of the authors. This repository is made public for the sole purpose of deploying the Streamlit web application and facilitating transparency for academic peer review.
+**Authors/Creators:** Ajwin Joseph Martin and Dr. Dileep Kumar
+
+The source code, algorithms, consensus logic, and trained models associated with IPred-S 1.0 are the exclusive intellectual property of Manipal Academy of Higher Education (MAHE). This repository is hosted on the creators' personal account and made public for the sole purpose of deploying the Streamlit web application and facilitating transparency for academic peer review.
 
 **Permissions:**
 * You are permitted to view the source code for educational and peer-review purposes.
@@ -43,6 +45,6 @@ The source code, algorithms, consensus logic, and trained models associated with
 
 **Restrictions:**
 * You may **NOT** copy, reproduce, distribute, modify, or create derivative works from this codebase.
-* You may **NOT** use the code or models for any commercial or private non-commercial deployment without explicit written permission from the authors.
+* You may **NOT** use the code or models for any commercial or private non-commercial deployment without explicit written permission from the copyright owner (MAHE) and the authors.
 
 For licensing inquiries or permission requests, please contact the authors directly.
