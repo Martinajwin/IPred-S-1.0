@@ -421,21 +421,28 @@ with tab3:
     """)
 
 # ==========================================================
-# 4️⃣ REFERENCES TAB
+# 4️⃣ REFERENCES & CITATION TAB
 # ==========================================================
 with tab4:
-    st.header("References and Citation")
+    st.header("References, Citation & Intellectual Property")
+    
+    # --- ADDED MANIPAL COPYRIGHT SECTION FOR LEGAL COMPLIANCE ---
+    st.markdown("### Institutional Affiliation & Copyright")
+    st.markdown("**© 2026 Manipal Academy of Higher Education (MAHE). All rights reserved.**")
+    st.markdown("Developed by: **D. Kumar, A. J. Martin**")
+    st.markdown("*The algorithms, consensus logic, and trained models associated with IPred-S 1.0 are the intellectual property of Manipal Academy of Higher Education (MAHE).*")
+    st.markdown("---")
     
     st.markdown("### How to Cite IPred-S 1.0 (Webtool Citation)")
     st.markdown("If you use the IPred-S 1.0 webtool in research or publications, please cite:")
     
     # Using st.info creates a bright, highlighted box instead of dimmed text
-    st.info("**IPred-S 1.0 Webtool** | Dileep Kumar et al. | Version 1.0 (2026).  \n**Webtool URL:** *https://aip-s-1-single-stage-screening.streamlit.app/*")
+    st.info("**IPred-S 1.0 Webtool** | D. Kumar, A. J. Martin | Manipal Academy of Higher Education (MAHE) | Version 1.0 (2026).  \n**Webtool URL:** *https://ipred-s-1-single-stage-screening.streamlit.app/*")
 
     st.markdown("### How to Cite the Associated Research Article (Pre-publication)")
-    st.markdown("This tool accompanies an unpublished research manuscript. Until acceptance, please cite the webtool as follows:")
+    st.markdown("This tool accompanies an unpublished research manuscript. Until acceptance, please cite the framework as follows:")
     
-    st.info("**IPred-S 1.0: Consensus Machine Learning Framework for Predicting Soluble Epoxide Hydrolase (sEH) Inhibitors** | Ajwin Joseph Martin, Dileep Kumar. | *Manuscript in preparation* (2026).")
+    st.info("**Integrating Quantum Chemical Descriptors and Matched Molecular Pair Analysis in an Explainable Ensemble Machine Learning Pipeline for In silico Identification of Soluble Epoxide Hydrolase Inhibitors** | D. Kumar, A. J. Martin | Manipal Academy of Higher Education (MAHE). | *Manuscript in preparation* (2026).")
 
     st.markdown("*(Final journal citation and DOI will be updated here once published and archived.)*")
 
