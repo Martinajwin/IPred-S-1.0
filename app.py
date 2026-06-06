@@ -80,7 +80,7 @@ def get_consensus_class(rf_p, svm_p, rf_ad, svm_ad):
 # ⚗️ Streamlit UI
 # -----------------------------
 st.set_page_config(page_title="IPred-S 1.0", layout="wide")
-st.title("Inhibitor Predictor for sEH (1.0)")  
+st.title("Inhibitor Predictor for Soluble Epoxide Hydrolase (sEH) 1.0")  
 st.markdown("### (IPred-S 1.0)")
 
 tabs = st.tabs(["1️⃣ Molecule Screening", "2️⃣ Methodology", "3️⃣ Model Performance", "4️⃣ References and Citation"])
