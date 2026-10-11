@@ -100,7 +100,7 @@ with tab1:
 
     rf_model, svm_model, scaler_loaded, rf_ad_threshold, svm_ad_threshold = load_pipeline_assets()
 
-    st.markdown("**A maximum of 300 SMILES and minimum of 10 SMILES is recommended.**")
+    st.markdown("**A maximum of 700 SMILES and minimum of 10 SMILES is recommended.**")
     
     input_option = st.radio("Input Type:", ["Enter SMILES manually", "Upload CSV"])
     smiles_list = []
