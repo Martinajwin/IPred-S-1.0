@@ -19,11 +19,10 @@ warnings.filterwarnings("ignore")
 # 🧩 Elite Features List
 # -----------------------------
 elite_features = [
-    'nBridgehead', 'ATSC4i', 'FilterItLogS', 'GATS3d', 
-    'PEOE_VSA1', 'GATS2s', 'SMR_VSA9', 'nBase', 
-    'SpAbs_A', 'NssNH', 'VR3_A', 'n7HRing', 'SlogP_VSA2', 
-    'nAromAtom', 'VSA_EState4', 'VE1_A', 'PEOE_VSA2', 'nHBDon', 
-    'nHBAcc', 'SlogP_VSA1', 'nN', 'SpMax_A', 'AATS0Z', 'nAcid'
+    'nAcid', 'nBase', 'SpAbs_A', 'SpMax_A', 'VE1_A', 'VR3_A', 'nAromAtom', 'nBridgehead', 
+    'nN', 'AATS0Z', 'ATSC4i', 'GATS3d', 'GATS2s', 'NssNH', 'nHBAcc', 'nHBDon', 
+    'FilterItLogS', 'PEOE_VSA1', 'PEOE_VSA2', 'SMR_VSA9', 'SlogP_VSA1', 'SlogP_VSA2', 
+    'VSA_EState4', 'n7HRing'
 ]
 
 @st.cache_resource(show_spinner="Loading models and assets...")
