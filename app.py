@@ -1,6 +1,10 @@
 # ==========================================================
 # 🏷️ IPred-S 1.0
 # ==========================================================
+import sklearn
+import streamlit as st
+
+st.write("Deployment scikit-learn:", sklearn.__version__)
 
 import streamlit as st
 import pandas as pd
