@@ -18,12 +18,6 @@ warnings.filterwarnings("ignore")
 # -----------------------------
 # 🧩 Elite Features List
 # -----------------------------
-import sklearn
-import streamlit as st
-
-st.write("Deployment scikit-learn:", sklearn.__version__)
-
-
 elite_features = [
     'nBridgehead', 'ATSC4i', 'FilterItLogS', 'GATS3d', 
     'PEOE_VSA1', 'GATS2s', 'SMR_VSA9', 'nBase', 
