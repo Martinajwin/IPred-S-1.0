@@ -40,22 +40,28 @@ def load_pipeline_assets():
         return None, None, None, None, None
 
 def get_consensus_class(rf_p, svm_p, rf_ad, svm_ad):
-    # --- NEW THRESHOLDS ---
-    # Base threshold set to 0.40 (The Realistic Sweet Spot)
-    threshold = 0.40
-    # High-confidence threshold for AD overrides (Base + 0.10)
-    strict_threshold = 0.50 
+    # --- OPTIMIZED THRESHOLDS (Based on Table 6 / Table S11) ---
+    rf_thresh = 0.40
+    svm_thresh = 0.35
+    ens_thresh = 0.30
 
-    rf_pred = 'Active' if rf_p >= threshold else 'Inactive'
-    svm_pred = 'Active' if svm_p >= threshold else 'Inactive'
+    # High-confidence strict thresholds for AD overrides (Base + 0.10)
+    rf_strict = rf_thresh + 0.10   # 0.50
+    svm_strict = svm_thresh + 0.10 # 0.45
+
+    # Individual Predictions
+    rf_pred = 'Active' if rf_p >= rf_thresh else 'Inactive'
+    svm_pred = 'Active' if svm_p >= svm_thresh else 'Inactive'
     
-    # Confidence is now measured as the distance from the new 0.40 threshold
-    rf_conf = abs(rf_p - threshold)
-    svm_conf = abs(svm_p - threshold)
+    # Confidence is measured as absolute probability distance from the model's specific threshold
+    rf_conf = abs(rf_p - rf_thresh)
+    svm_conf = abs(svm_p - svm_thresh)
     
+    # Ensemble Prediction
     ens_p = (rf_p + svm_p) / 2
-    ens_pred = 'Active' if ens_p >= threshold else 'Inactive'
+    ens_pred = 'Active' if ens_p >= ens_thresh else 'Inactive'
 
+    # Strict Consensus Logic
     if (rf_pred == svm_pred) and rf_ad and svm_ad:
         return rf_pred
     elif (rf_pred != svm_pred) and rf_ad and svm_ad:
@@ -63,20 +69,20 @@ def get_consensus_class(rf_p, svm_p, rf_ad, svm_ad):
         elif svm_conf > rf_conf: return svm_pred
         else: return ens_pred
     elif rf_ad and not svm_ad:
-        if rf_pred == 'Active' and rf_p < strict_threshold: return 'Inactive'
+        if rf_pred == 'Active' and rf_p < rf_strict: return 'Inactive'
         return rf_pred
     elif svm_ad and not rf_ad:
-        if svm_pred == 'Active' and svm_p < strict_threshold: return 'Inactive'
+        if svm_pred == 'Active' and svm_p < svm_strict: return 'Inactive'
         return svm_pred
     elif not rf_ad and not svm_ad:
         if rf_pred == svm_pred:
             if rf_pred == 'Active':
-                if rf_p >= strict_threshold and svm_p >= strict_threshold: return 'Active (outside AD)'
+                if rf_p >= rf_strict and svm_p >= svm_strict: return 'Active (outside AD)'
                 else: return 'Inactive (outside AD)'
             else:
                 return 'Inactive (outside AD)'
         else:
-            return f"{ens_pred} (outside AD)"# -----------------------------
+            return f"{ens_pred} (outside AD)"
 # ⚗️ Streamlit UI
 # -----------------------------
 st.set_page_config(page_title="IPred-S 1.0", layout="wide")
