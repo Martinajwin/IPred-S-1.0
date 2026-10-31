@@ -42,8 +42,8 @@ def load_pipeline_assets():
 def get_consensus_class(rf_p, svm_p, rf_ad, svm_ad):
     # --- OPTIMIZED THRESHOLDS (Based on Table 6 / Table S11) ---
     rf_thresh = 0.40
-    svm_thresh = 0.35
-    ens_thresh = 0.30
+    svm_thresh = 0.45
+    ens_thresh = 0.45
 
     # High-confidence strict thresholds for AD overrides (Base + 0.10)
     rf_strict = rf_thresh + 0.10   # 0.50
@@ -251,7 +251,7 @@ with tab2:
         """
 **Consensus ML Workflow for Compound Activity Prediction**
 
-The IPred-S 1.0 pipeline implements a highly stringent, consensus-based machine learning framework for predicting soluble epoxide hydrolase (sEH) inhibitors. SMILES input via manual entry or CSV is first validated and canonicalized. To accurately capture 3D volumetric properties without corrupting 2D graph features, molecules undergo a rapid heavy-atom 3D coordinate embedding. The pipeline then computes 23 highly stable topological descriptors (1D, 2D, and 3D) using Mordred. While early iterations of this framework incorporated Quantum Mechanical (QM) descriptors to capture deeper electronic properties, they were excluded from the final deployment. The prohibitive computational cost of executing real-time quantum calculations creates a massive bottleneck for web-based screening. By isolating the 23 most predictive topological features, the tool ensures rapid, high-throughput performance without sacrificing the strict accuracy of the models. These raw features are then strictly normalized using a pre-fitted True Standard Scaler extracted from the original training dataset.
+The IPred-S 1.0 pipeline implements a highly stringent, consensus-based machine learning framework for predicting soluble epoxide hydrolase (sEH) inhibitors. SMILES input via manual entry or CSV is first validated and canonicalized. To accurately capture 3D volumetric properties without corrupting 2D graph features, molecules undergo a rapid heavy-atom 3D coordinate embedding. The pipeline then computes 24 highly stable topological descriptors (1D, 2D, and 3D) using Mordred. While early iterations of this framework incorporated Quantum Mechanical (QM) descriptors to capture deeper electronic properties, they were excluded from the final deployment. The prohibitive computational cost of executing real-time quantum calculations creates a massive bottleneck for web-based screening. By isolating the 24 most predictive topological features, the tool ensures rapid, high-throughput performance without sacrificing the strict accuracy of the models. These raw features are then strictly normalized using a pre-fitted True Standard Scaler extracted from the original training dataset.
 
 Classification is performed simultaneously by a Random Forest (RF) and a Support Vector Machine (SVM). Each model establishes an independent Applicability Domain (AD) threshold based on the training set's confidence distribution. The final prediction is governed by a strict 5-rule hierarchical consensus logic that evaluates model agreement, independent confidence margins, and AD constraints to actively minimize false positives. Finally, the merged predictions, probabilities, and detailed data with descriptors are displayed and available for export.
 """
@@ -283,7 +283,7 @@ Classification is performed simultaneously by a Random Forest (RF) and a Support
         
         dot.node("Validate", "<<b>VALIDATE &amp; EMBED 3D</b><br align='left'/>• RDKit Mol conversion<br align='left'/>• Heavy-atom 3D embedding (MMFF94)<br align='left'/>• Remove invalid entries>", fillcolor="gold")
         
-        dot.node("Desc", "<<b>COMPUTE DESCRIPTORS</b><br align='left'/>• 23 Mordred features (1D, 2D, 3D)<br align='left'/>• Handle missing features via mean imputation>", fillcolor="lightcoral")
+        dot.node("Desc", "<<b>COMPUTE DESCRIPTORS</b><br align='left'/>• 24 Mordred features (1D, 2D, 3D)<br align='left'/>• Handle missing features via mean imputation>", fillcolor="lightcoral")
         
         dot.node("Scale", "<<b>NORMALIZATION</b><br align='left'/>• Apply True Standard Scaler parameters<br align='left'/>• Clip extreme outliers>", fillcolor="plum")
 
@@ -448,7 +448,7 @@ with tab4:
     st.markdown("### How to Cite the Associated Research Article (Pre-publication)")
     st.markdown("This tool accompanies an unpublished research manuscript. Until acceptance, please cite the framework as follows:")
     
-    st.info("**Integrating Quantum Chemical Descriptors and Matched Molecular Pair Analysis in an Explainable Ensemble Machine Learning Pipeline for In silico Identification of Soluble Epoxide Hydrolase Inhibitors** | D. Kumar, A. J. Martin | Manipal Academy of Higher Education (MAHE). | *Manuscript in preparation* (2026).")
+    st.info("**Explainable Machine Learning and Matched Molecular Pair Analysis for Scaffold-Disjoint Prediction and Optimization of Soluble Epoxide Hydrolase Inhibitors** | D. Kumar, A. J. Martin | Manipal Academy of Higher Education (MAHE). | *Manuscript in preparation* (2026).")
 
     st.markdown("*(Final journal citation and DOI will be updated here once published and archived.)*")
 
